@@ -140,7 +140,7 @@ const HeroSection = () => {
               fontSize: 'clamp(13px, 1.8vw, 18px)', color: 'rgba(255,255,255,0.65)',
               letterSpacing: '0.02em'
             }}>
-              Security Analyst
+              GRC Analyst
             </span>
           </div>
         </div>
@@ -191,6 +191,30 @@ const HeroSection = () => {
           >
             View Work
           </button>
+          <a
+            href="/resume.jpg"
+            download="T_Mohammed_Jazeel_Resume.jpg"
+            style={{
+              background: 'transparent', border: '1px solid rgba(0,255,136,0.22)',
+              color: 'rgba(0,255,136,0.75)', fontFamily: 'Inter, sans-serif',
+              fontWeight: 500, fontSize: '13px', padding: '12px 30px', borderRadius: '9px',
+              cursor: 'pointer', letterSpacing: '0.03em', textDecoration: 'none',
+              display: 'inline-flex', alignItems: 'center', gap: '7px',
+              transition: 'border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease'
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.borderColor = 'rgba(0,255,136,0.5)';
+              e.currentTarget.style.color = '#00ff88';
+              e.currentTarget.style.boxShadow = '0 0 18px rgba(0,255,136,0.12)';
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.borderColor = 'rgba(0,255,136,0.22)';
+              e.currentTarget.style.color = 'rgba(0,255,136,0.75)';
+              e.currentTarget.style.boxShadow = 'none';
+            }}
+          >
+            ↓ Resume
+          </a>
         </div>
 
         {/* Scroll hint */}

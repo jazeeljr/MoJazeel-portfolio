@@ -89,12 +89,6 @@ const Footer = () => {
                 Jaz<span style={{ color: '#00ff88' }}>eel</span>
               </span>
             </div>
-            <p style={{
-              fontFamily: 'Inter, sans-serif', fontSize: '13px',
-              color: 'rgba(255,255,255,0.35)', lineHeight: 1.7, margin: 0
-            }}>
-              Security Analyst specializing in SOC operations, malware investigation, and digital forensics.
-            </p>
           </div>
 
           {/* Nav */}

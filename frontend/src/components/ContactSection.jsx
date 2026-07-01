@@ -140,7 +140,7 @@ const ContactSection = () => {
           fontFamily: 'Inter, sans-serif', fontSize: 'clamp(13px, 1.5vw, 15px)',
           color: 'rgba(255,255,255,0.4)', maxWidth: '480px'
         }}>
-          Available for security analyst roles, freelance investigations, and consulting.
+          Available for GRC analyst roles, freelance risk assessments, and compliance consulting.
         </p>
       </div>
 
@@ -373,7 +373,7 @@ const ContactSection = () => {
               fontFamily: 'Inter, sans-serif', fontSize: '13px',
               color: 'rgba(255,255,255,0.45)', lineHeight: 1.6, margin: 0
             }}>
-              Open to full-time security analyst positions, SOC roles, and freelance security consulting work.
+              Open to full-time GRC analyst positions, risk management roles, and freelance compliance consulting work.
             </p>
           </div>
         </div>

@@ -106,7 +106,7 @@ const Preloader = ({ onComplete }) => {
         textTransform: 'uppercase',
         marginBottom: '64px'
       }}>
-        Security Analyst · Portfolio
+        GRC Analyst · Portfolio
       </div>
 
       <div ref={progressTextRef} style={{ width: 'min(300px, 80vw)' }}>

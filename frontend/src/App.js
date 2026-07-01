@@ -6,8 +6,9 @@ import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
 import ProjectsSection from "./components/ProjectsSection";
 import CertificationsSection from "./components/CertificationsSection";
+import AchievementsSection from "./components/AchievementsSection";
 import ContactSection from "./components/ContactSection";
-import Footer from "./components/Footer";
+
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -30,9 +31,9 @@ function App() {
             <AboutSection />
             <ProjectsSection />
             <CertificationsSection />
+            <AchievementsSection />
             <ContactSection />
           </main>
-          <Footer />
         </>
       )}
     </div>

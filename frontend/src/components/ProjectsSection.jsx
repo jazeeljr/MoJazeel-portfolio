@@ -247,7 +247,7 @@ const ProjectCard = ({ project, onOpenTerminal }) => {
         </p>
 
         {/* Tech stack */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: project.caseFile ? '16px' : '0' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: (project.caseFile || project.githubUrl) ? '16px' : '0' }}>
           {project.tech.map(t => (
             <span key={t} style={{
               fontFamily: 'JetBrains Mono, monospace', fontSize: '9px',
@@ -259,6 +259,76 @@ const ProjectCard = ({ project, onOpenTerminal }) => {
             </span>
           ))}
         </div>
+
+        {/* GitHub + Live URL buttons */}
+        {!project.caseFile && (project.githubUrl || project.liveUrl) && (
+          <div style={{ display: 'flex', gap: '8px', marginTop: '4px' }}>
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px',
+                  flex: 1,
+                  background: 'rgba(251,146,60,0.07)',
+                  border: '1px solid rgba(251,146,60,0.25)',
+                  color: '#fb923c',
+                  fontFamily: 'JetBrains Mono, monospace', fontSize: '10px',
+                  fontWeight: 600, padding: '10px 10px', borderRadius: '8px',
+                  cursor: 'pointer', letterSpacing: '0.04em', textDecoration: 'none',
+                  transition: 'background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease',
+                  whiteSpace: 'nowrap'
+                }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.background = 'rgba(251,146,60,0.14)';
+                  e.currentTarget.style.boxShadow = '0 0 14px rgba(251,146,60,0.18)';
+                  e.currentTarget.style.borderColor = 'rgba(251,146,60,0.5)';
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.background = 'rgba(251,146,60,0.07)';
+                  e.currentTarget.style.boxShadow = 'none';
+                  e.currentTarget.style.borderColor = 'rgba(251,146,60,0.25)';
+                }}
+              >
+                <ExternalLink size={12} />
+                Visit Website
+              </a>
+            )}
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px',
+                  flex: 1,
+                  background: 'rgba(0,255,136,0.06)',
+                  border: '1px solid rgba(0,255,136,0.2)',
+                  color: '#00ff88',
+                  fontFamily: 'JetBrains Mono, monospace', fontSize: '10px',
+                  fontWeight: 600, padding: '10px 10px', borderRadius: '8px',
+                  cursor: 'pointer', letterSpacing: '0.04em', textDecoration: 'none',
+                  transition: 'background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease',
+                  whiteSpace: 'nowrap'
+                }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.background = 'rgba(0,255,136,0.12)';
+                  e.currentTarget.style.boxShadow = '0 0 14px rgba(0,255,136,0.15)';
+                  e.currentTarget.style.borderColor = 'rgba(0,255,136,0.4)';
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.background = 'rgba(0,255,136,0.06)';
+                  e.currentTarget.style.boxShadow = 'none';
+                  e.currentTarget.style.borderColor = 'rgba(0,255,136,0.2)';
+                }}
+              >
+                <ExternalLink size={12} />
+                GitHub
+              </a>
+            )}
+          </div>
+        )}
 
         {/* Case file button */}
         {project.caseFile && (
@@ -365,14 +435,8 @@ const ProjectsSection = () => {
           fontSize: 'clamp(28px, 4.5vw, 52px)', color: '#ffffff',
           letterSpacing: '-0.03em', lineHeight: 1.1, margin: 0
         }}>
-          Case Files &amp; <span style={{ color: '#00ff88' }}>Projects</span>
+          <span style={{ color: '#00ff88' }}>Projects</span>
         </h2>
-        <p style={{
-          fontFamily: 'Inter, sans-serif', fontSize: 'clamp(13px, 1.5vw, 15px)',
-          color: 'rgba(255,255,255,0.38)', marginTop: '12px', maxWidth: '500px'
-        }}>
-          From real SOC investigations to security tools — a collection of hands-on work.
-        </p>
       </div>
 
       {/* Bento grid */}

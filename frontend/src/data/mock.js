@@ -1,33 +1,33 @@
 export const profileData = {
   name: "T Mohammed Jazeel",
   shortName: "Jazeel",
-  title: "Security Analyst",
-  subtitle: "Cybersecurity · SOC Analysis · Malware Investigation · Digital Forensics",
-  bio: "I'm a Computer Science Engineering student with strong interests in cybersecurity, ethical hacking, and system security. I also work on data analytics and IoT-based systems. I continuously improve my skills through hands-on labs in SOC monitoring, phishing investigation, malware analysis, and incident response.",
+  title: "GRC Analyst",
+  subtitle: "AI Governance · Risk Assessment · Compliance · ISO 27001 · NIST AI RMF",
+  bio: "I'm a Computer Science Engineering student with hands-on experience in AI Governance, GRC, SOC operations, and penetration testing fundamentals. I have worked on AI governance, risk assessments, compliance documentation, and mapping security recommendations to ISO 27001:2022 Annex A controls. I am looking to build a career in Governance, Risk, and Compliance (GRC) with a focus on AI governance, risk management, and compliance.",
   email: "mohammedjazeel73@gmail.com",
   github: "https://github.com/jazeeljr",
   linkedin: "https://www.linkedin.com/in/mjazeel",
-  profileImage: "https://customer-assets.emergentagent.com/job_24811744-8efc-4dee-a616-c1e2c117e96a/artifacts/fcx2c3ut_portfolio.jpg"
+  profileImage: "/images/profile-pic.png"
 };
 
 export const skillIcons = [
-  { name: "Python", icon: "Code" },
-  { name: "Wireshark", icon: "Wifi", image: "/wireshark.png" },
-  { name: "Volatility", icon: "Cpu" },
-  { name: "SIEM", icon: "Shield" },
-  { name: "Linux", icon: "Terminal" },
-  { name: "Network", icon: "Network" },
-  { name: "Forensics", icon: "Search" },
-  { name: "Threat Intel", icon: "Eye" }
+  { name: "ISO 27001", icon: "Shield" },
+  { name: "NIST RMF", icon: "Cpu" },
+  { name: "Risk Mgmt", icon: "Eye" },
+  { name: "EU AI Act", icon: "Search" },
+  { name: "Compliance", icon: "Code" },
+  { name: "Splunk", icon: "Terminal" },
+  { name: "Gap Analysis", icon: "Network" },
+  { name: "Governance", icon: "Wifi" }
 ];
 
 export const skills = [
-  { name: "Python", level: 88 },
-  { name: "SIEM / SOC", level: 90 },
-  { name: "Malware Analysis", level: 85 },
-  { name: "Digital Forensics", level: 87 },
-  { name: "Incident Response", level: 89 },
-  { name: "Penetration Testing", level: 82 }
+  { name: "GRC & Risk Management", level: 90 },
+  { name: "ISO/IEC 27001:2022", level: 88 },
+  { name: "NIST Cybersecurity Framework", level: 86 },
+  { name: "AI Governance (EU AI Act)", level: 85 },
+  { name: "Compliance Documentation", level: 89 },
+  { name: "Security Operations (SIEM)", level: 82 }
 ];
 
 const MALWARE_REPORT = `analyst@jazeel:~/case-files $ cat vbscript-malware-report.txt
@@ -273,26 +273,39 @@ END OF REPORT █`;
 export const projects = [
   {
     id: 1,
-    title: "Smart Locker System using Object Detection",
-    description: "Developed a smart locker system using ESP32-CAM, where when the ID card of a student is shown, the locker will open automatically. It does not open for unauthorized students whose ID cards are not registered in the system.",
-    image: "https://customer-assets.emergentagent.com/job_24811744-8efc-4dee-a616-c1e2c117e96a/artifacts/y8wxbvl5_project1.png",
-    tech: ["ESP32-CAM", "Edge Impulse", "Computer Vision", "IoT", "Object Detection"],
+    title: "AI Governance Assessment – EU AI Act & NIST AI RMF",
+    description: "Practical AI Governance assessment for a fictional financial services organization (NorthStar Financial Services) using EU AI Act and NIST AI RMF frameworks. Assessed 7 enterprise AI systems, classified risk levels, evaluated governance maturity, and prepared compliance recommendations.",
+    image: "/images/projects/ai-governance.png",
+    tech: ["EU AI Act", "NIST AI RMF", "AI Governance", "Risk Assessment", "Compliance"],
     caseFile: false,
     caseColor: null,
-    terminalContent: null
+    terminalContent: null,
+    githubUrl: "https://github.com/jazeeljr/NorthStar-AI-Governance"
   },
   {
     id: 2,
-    title: "Cryptocurrency Analytics Dashboard",
-    description: "Built an interactive cryptocurrency analytics dashboard using SQL for data querying and Power BI for visualization. Tracks market trends, volume changes, and historical price patterns across major coins.",
-    image: "https://customer-assets.emergentagent.com/job_24811744-8efc-4dee-a616-c1e2c117e96a/artifacts/qekmdhjb_project4.png",
-    tech: ["SQL", "Power BI", "Data Analytics", "Visualization"],
+    title: "Academic Portal Security Risk Assessment",
+    description: "GRC-based security risk assessment for an academic portal system. Focused on access control risks, MFA recommendations, and academic data protection. Mapped findings to ISO 27001:2022 Annex A controls and delivered a structured risk register with mitigation strategies.",
+    image: "/images/projects/academic-portal.png",
+    tech: ["GRC", "ISO 27001:2022", "Risk Register", "Access Control", "MFA"],
     caseFile: false,
     caseColor: null,
-    terminalContent: null
+    terminalContent: null,
+    githubUrl: "https://github.com/jazeeljr/DHI-GRC-Risk-Assessment"
   },
   {
     id: 3,
+    title: "RetailNova Risk Assessment",
+    description: "Cybersecurity risk assessment for RetailNova Pty Ltd (fictional retail organization). Identified and rated risks including database attacks, employee phishing, and AWS misconfiguration using a 5×5 risk matrix, with documented mitigation recommendations.",
+    image: "/images/projects/retailnova.png",
+    tech: ["Risk Assessment", "Risk Matrix", "AWS Security", "Phishing", "Data Protection"],
+    caseFile: false,
+    caseColor: null,
+    terminalContent: null,
+    githubUrl: "https://github.com/jazeeljr/RetailNova"
+  },
+  {
+    id: 4,
     title: "Malware Incident Analysis – VBScript Investigation",
     description: "Investigated a WSHRAT malware delivered via phishing email on a simulated SOC environment, traced persistence mechanisms, identified C2 communication, and contained the compromised host.",
     image: "https://customer-assets.emergentagent.com/job_24811744-8efc-4dee-a616-c1e2c117e96a/artifacts/x5hey6ja_project2.png",
@@ -300,17 +313,53 @@ export const projects = [
     caseFile: true,
     caseColor: "red",
     imageContain: true,
-    terminalContent: MALWARE_REPORT
+    terminalContent: MALWARE_REPORT,
+    githubUrl: null
   },
   {
-    id: 4,
+    id: 5,
     title: "Memory Forensics & Incident Investigation",
     description: "Analyzed Windows memory dumps to detect suspicious processes, identify malicious artifacts, and confirm compromised accounts during a simulated IR scenario.",
     image: "https://customer-assets.emergentagent.com/job_24811744-8efc-4dee-a616-c1e2c117e96a/artifacts/555ofxs1_project3.png",
     tech: ["Volatility", "Windows Memory Forensics", "Incident Response", "IOC Analysis"],
     caseFile: true,
     caseColor: "cyan",
-    terminalContent: MEMORY_REPORT
+    terminalContent: MEMORY_REPORT,
+    githubUrl: null
+  },
+  {
+    id: 6,
+    title: "SZMAFI Martial Arts Website",
+    description: "Designed and developed a professional website for SZMAFI Martial Arts, featuring a modern layout, class schedules, instructor profiles, and a contact system — built to represent the club's identity online.",
+    image: "/images/projects/szmafi.png",
+    tech: ["HTML", "CSS", "JavaScript", "Web Design", "Responsive"],
+    caseFile: false,
+    caseColor: null,
+    terminalContent: null,
+    githubUrl: "https://github.com/jazeeljr/SZMAFI-Martial-Arts",
+    liveUrl: "https://szmafi-martial-arts.vercel.app/"
+  },
+  {
+    id: 7,
+    title: "Cryptocurrency Analytics Dashboard",
+    description: "Built an interactive cryptocurrency analytics dashboard using SQL for data querying and Power BI for visualization. Tracks market trends, volume changes, and historical price patterns across major coins.",
+    image: "/images/projects/crypto-dashboard.png",
+    tech: ["SQL", "Power BI", "Data Analytics", "Visualization", "Crypto"],
+    caseFile: false,
+    caseColor: null,
+    terminalContent: null,
+    githubUrl: "https://github.com/jazeeljr/Crypto-Dashboard"
+  },
+  {
+    id: 8,
+    title: "Coffee Production Analysis",
+    description: "Data analysis project using Python to explore global coffee production trends. Applied pandas and matplotlib to process agricultural datasets, identify top-producing countries, and visualize production patterns over decades.",
+    image: "/images/projects/coffee-analysis.png",
+    tech: ["Python", "Pandas", "Matplotlib", "Data Analysis", "Visualization"],
+    caseFile: false,
+    caseColor: null,
+    terminalContent: null,
+    githubUrl: "https://github.com/jazeeljr/Coffee-Production-Analysis-using-python"
   }
 ];
 
@@ -347,6 +396,28 @@ export const certifications = [
     date: "Jan 23, 2026",
     image: "https://customer-assets.emergentagent.com/job_future-dev-showcase-2/artifacts/xsb5ymk2_image.png",
     verifyUrl: null
+  },
+  {
+    id: 4,
+    title: "Policy as Code",
+    issuer: "GRC Playground",
+    badge: "GRC Playground",
+    badgeColor: "#00ff88",
+    description: "Turn governance rules into automated policy checks using a policy engine. Built, tested, debugged, and enforced policy logic inside a deployment workflow.",
+    date: "Jun 17, 2026",
+    image: "/images/certifications/policy-as-code.png",
+    verifyUrl: "https://grcplayground.com"
+  },
+  {
+    id: 5,
+    title: "Python Data Analysis: NumPy & Pandas Masterclass",
+    issuer: "Udemy",
+    badge: "Udemy",
+    badgeColor: "#a435f0",
+    description: "Comprehensive masterclass covering Python data analysis techniques using NumPy and Pandas.",
+    date: "Jul 26, 2025",
+    image: "/images/certifications/python-data-analysis.png",
+    verifyUrl: "https://ude.my/UC-c9ed31ba-3530-494d-a487-46fb76799f71"
   }
 ];
 
@@ -355,5 +426,5 @@ export const navLinks = [
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Certifications", href: "#certifications" },
-  { label: "Contact", href: "#contact" }
+  { label: "Achievements", href: "#achievements" }
 ];
